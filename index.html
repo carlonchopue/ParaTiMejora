@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>para-ti-cele</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: linear-gradient(45deg, 
+                #ff4b2b, 
+                #ff416c, 
+                #ffaf40, 
+                #47e8e8, 
+                #6a82fb, 
+                #fc5c7d, 
+                #ff4b2b);
+            background-size: 300% 300%;
+            animation: gradientAnimation 5s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero {
+            text-align: center;
+            padding: 400px 20px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            background: url('img/FONDO.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); 
+            z-index: -1;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            flex-wrap: wrap;
+            width: 90%;
+            margin: 50px auto;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .carousel img {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 20px;
+            transition: transform 0.5s;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .carousel img:hover {
+            transform: scale(1.1);
+        }
+
+        .quotes {
+            text-align: center;
+            padding: 50px;
+            color: #fff;
+            font-size: 1.8em;
+        }
+
+        .music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1.2em;
+            }
+            .carousel img {
+                width: 100%;
+            }
+            .quotes {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            .carousel {
+                flex-direction: column;
+                align-items: center;
+            }
+            .carousel img {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+            .quotes {
+                font-size: 1.2em;
+            }
+            .music-control {
+                bottom: 10px;
+                right: 10px;
+                padding: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1 class="hidden">¡Sorpresa, TE QUIEROOOOOOOO!</h1>
+        <h2 class="hidden">Eres la mejor amiga del mundo</h2>
+    </div>
+    <div class="quotes">
+        <h3>INSTRUCIONES</h3>
+        <p>1. has click en el boton "Reproducir musica"</p>
+        <p>2. delisa hacia abajo lentamente y espero que te guste🥺</p>
+        <p>No tengo fotos de ti asi que espero que no te enojes por tomarlas prestadas del Facebook😁😅</p>
+        <BR>
+        <BR>
+        <BR>
+
+        <h1>3...</h1>
+        <BR>
+        <BR>
+        <BR>
+
+        <h1>2..</h1>
+        <BR>
+        <BR>
+        <BR>
+
+        <h1>1.</h1>
+        <BR>
+        <BR>
+        <BR>
+
+        <h1>LEST GOOOOO!!</h1>
+        <BR>
+        <BR>
+        <BR>
+
+    </div>
+    <div class="carousel">
+        <img src="img/imagen1.jpg" alt="Recuerdo 1">
+        <img src="img/imagen4.jpg" alt="Recuerdo 2">
+        <img src="img/imagen2.jpg" alt="Recuerdo 3">
+    </div>
+
+    <div class="quotes">
+        <h1>A veces me pregunto cómo sería la vida sin tus abrazos🤔🤨.</h1>
+    </div>
+
+    <div class="carousel">
+        <img src="img/imagen5.jpg" alt="Recuerdo 5">
+    </div>
+
+    <div class="quotes">
+        <h1>pero rápidamente me doy cuenta de que no quiero saberlo ☺️🫶🤗.</h1>
+    </div>
+
+    <div class="carousel">
+        <img src="img/imagen6.jpg" alt="Recuerdo 6">
+    </div>
+
+    <div class="quotes">
+        <h1>Aunque a veces me muerdas y me dejes marcas de batalla en el hombro 🤪🤭.</h1>
+    </div>
+
+    <div class="carousel">
+        <img src="img/imagen7.jpg" alt="Recuerdo 7">
+    </div>
+
+    <div class="quotes">    
+        <h1>no cambiaría ni un segundo de todo lo que compartimos🥺🥺.</h1>
+    </div>
+
+    <div class="carousel">
+        <img src="img/imagen8.jpg" alt="Recuerdo 8">
+    </div>
+
+    <div class="quotes">    
+        <h1>Eres esa persona que convierte los días comunes en momentos inolvidables😄😄.</h1>
+    </div>
+
+    <div class="carousel">
+        <img src="img/imagen9.jpg" alt="Recuerdo 9">
+    </div>
+
+
+    <div class="quotes">    
+        <h1>Gracias por cada risa, por cada abrazo apretado y por estar ahí😉❤️‍🩹.</h1>
+    </div>
+
+    <div class="carousel">
+        <img src="img/imagen10.jpg" alt="Recuerdo 10">
+    </div>
+
+
+
+    <div class="quotes">    
+        <h1>incluso en los días más difíciles😥🌧️.</h1>
+    </div>
+
+
+    <div class="carousel">
+        <img src="img/imagen11.jpg" alt="Recuerdo 11">
+    </div>
+
+
+
+    <div class="quotes">    
+        <h1>No sabes cuánto valoro tenerte en mi vida🤗❤️!</h1>
+    </div>
+
+    <div class="carousel">
+        <img src="img/imagen12.jpg" alt="Recuerdo 12">
+    </div>
+
+
+
+
+    <div class="quotes">    
+        <h1>Contigo he aprendido que la vida se disfruta mejor riendo a carcajadas😅😁.</h1>
+    </div>
+
+    <div class="carousel">
+        <img src="img/imagen13.jpg" alt="Recuerdo 13">
+    </div>
+
+
+
+
+    <div class="quotes">    
+        <h1>compartiendo secretos y creando historias que algún día contaremos con nostalgia😎❤️.</h1>
+    </div>
+
+
+    <div class="carousel">
+        <img src="img/imagen14.jpg" alt="Recuerdo 14">
+    </div>
+
+
+
+    <div class="quotes">    
+        <h1>A veces me pregunto cómo aguantas mis quejas después de un entrenamiento duro o cómo sigues sonriendo después de nuestras practicas en la compañia🫠❤️‍🩹💪.</h1>
+    </div>
+
+
+    <div class="carousel">
+        <img src="img/imagen15.jpg" alt="Recuerdo 15">
+    </div>
+
+
+
+    <div class="quotes">    
+        <h1>Pero así eres tú inigualable, leal y única😉🥺.</h1>
+    </div>
+
+
+    <div class="carousel">
+        <img src="img/imagen16.jpg" alt="Recuerdo 15">
+    </div>
+
+
+
+
+    <div class="quotes">    
+        <h1>¡Te quiero más de lo que las palabras pueden explicar🫣!</h1>
+    </div>
+
+
+    <div class="carousel">
+        <img src="img/imagen17.jpg" alt="Recuerdo 15">
+    </div>
+
+
+
+    <div class="quotes">    
+        <h1>¡❤️Te quiero muchísimo❤️!</h1>   
+    </div>
+
+
+
+
+    <div class="carousel">
+        <img src="img/imagen3.jpg" alt="Recuerdo 4">
+    </div>
+    <audio id="bg-music" src="music/musica.mp3" loop></audio>
+    <div class="music-control" onclick="toggleMusic()">🎵 Reproducir Música</div>
+
+    <script>
+        function toggleMusic() {
+            const music = document.getElementById('bg-music');
+            const control = document.querySelector('.music-control');
+            if (music.paused) {
+                music.play();
+                control.textContent = '🎵 Pausar Música';
+            } else {
+                music.pause();
+                control.textContent = '🎵 Reproducir Música';
+            }
+        }
+
+        // Intersection Observer para animar texto al deslizar
+        const hiddenElements = document.querySelectorAll('.hidden');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        hiddenElements.forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
+
